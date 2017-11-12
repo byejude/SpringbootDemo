@@ -1,10 +1,15 @@
 package com.tulip.girlTest.domain;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import static com.sun.corba.se.spi.activation.IIOP_CLEAR_TEXT.value;
 
 @Entity
 public class Girl {
@@ -12,8 +17,11 @@ public class Girl {
     @GeneratedValue
     private Integer id;
 
+    @NotBlank(message = "这个字段必传")
+    @Length(max = 1,min = 1)
     private String cupSize;
 
+    @Min(value = 18, message = "未成年少女禁止入门")
     private Integer age;
 
     private Double money;
