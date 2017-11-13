@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-import static com.sun.corba.se.spi.activation.IIOP_CLEAR_TEXT.value;
+
 
 @Entity
 public class Girl {
