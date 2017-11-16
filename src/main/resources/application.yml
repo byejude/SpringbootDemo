@@ -6,8 +6,18 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/demo
     username: root
     password: 123456
-  jpa:
-    hibernate:
-      ddl-auto: create
-    show-sql: true
+    jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: create-drop
+        naming:
+          strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+
+    thymeleaf:
+        cache: false
+        mode: LEGACYHTML5
 
