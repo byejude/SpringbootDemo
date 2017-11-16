@@ -1,6 +1,6 @@
 package com.tulip.girlTest.controller;
 
-import com.tulip.girlTest.Service.GirlService;
+import com.tulip.girlTest.service.GirlService;
 import com.tulip.girlTest.domain.Girl;
 import com.tulip.girlTest.properties.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;

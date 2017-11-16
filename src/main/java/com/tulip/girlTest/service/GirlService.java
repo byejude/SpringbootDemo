@@ -1,4 +1,4 @@
-package com.tulip.girlTest.Service;
+package com.tulip.girlTest.service;
 
 import com.tulip.girlTest.domain.Girl;
 import com.tulip.girlTest.properties.GirlRepository;

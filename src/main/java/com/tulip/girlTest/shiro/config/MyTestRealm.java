@@ -49,9 +49,9 @@ public class MyTestRealm extends AuthorizingRealm {
             }
             SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
               //传入输入的userinfo等去进行验证
-                    userInfo, //用户名
+                    userInfo.getName(), //用户名
                     userInfo.getPassword(), //密码
-                 // ByteSource.Util.bytes(userInfo.getCredentialsSalt()),//salt=username+salt
+                    ByteSource.Util.bytes(userInfo.getCredentialsSalt()),//salt=username+salt
                     getName()
             );
         return authenticationInfo;
